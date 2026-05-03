@@ -1,0 +1,122 @@
+body {
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#f5f5f5;
+}
+
+h1,h2,h3 {
+  font-family:'Playfair Display',serif;
+}
+
+header {
+  background:#0d1b2a;
+  color:white;
+  padding:15px;
+  text-align:center;
+}
+
+.hero {
+  background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+  url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');
+  background-size:cover;
+  color:white;
+  padding:100px 20px;
+  text-align:center;
+}
+
+.highlight { color:gold; }
+
+.btn {
+  padding:12px 20px;
+  margin:5px;
+  border-radius:5px;
+  text-decoration:none;
+  display:inline-block;
+}
+
+.call { background:linear-gradient(45deg,#ff7e00,#ffb347); color:white; }
+.whatsapp { background:linear-gradient(45deg,#25D366,#128C7E); color:white; }
+
+.section { padding:30px; text-align:center; }
+
+.cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+}
+
+.card {
+  background:white;
+  padding:15px;
+  border-radius:15px;
+  overflow:hidden;
+  transition:0.4s;
+}
+
+.card:hover {
+  transform:translateY(-10px);
+}
+
+.card img {
+  width:100%;
+  border-radius:10px;
+}
+
+.slider {
+  position:relative;
+  height:180px;
+  overflow:hidden;
+}
+
+.slider img {
+  position:absolute;
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  opacity:0;
+  animation:slide 9s infinite;
+}
+
+.slider img:nth-child(1){animation-delay:0s;}
+.slider img:nth-child(2){animation-delay:3s;}
+.slider img:nth-child(3){animation-delay:6s;}
+
+@keyframes slide {
+  0%{opacity:0;}
+  10%{opacity:1;}
+  30%{opacity:1;}
+  40%{opacity:0;}
+  100%{opacity:0;}
+}
+
+.call-highlight {
+  color:#ff5722;
+  font-weight:bold;
+  animation:blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%,100%{opacity:1;}
+  50%{opacity:0.4;}
+}
+
+.footer {
+  background:#0d1b2a;
+  color:white;
+  padding:20px;
+}
+
+.fade-left {opacity:0; transform:translateX(-50px);}
+.fade-right {opacity:0; transform:translateX(50px);}
+.show {opacity:1; transform:translate(0); transition:0.8s;}
+
+.sticky-whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:15px;
+  border-radius:50%;
+  color:white;
+  text-decoration:none;
+}
