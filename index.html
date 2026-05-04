@@ -3,97 +3,268 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>7-Seater Cab Service</title>
+<title>Spiritual Yatra</title>
 
-<link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+<style>
+
+body {margin:0;font-family:'Poppins',sans-serif;background:#f8f3e9;}
+h1,h2,h3 {font-family:'Playfair Display',serif;}
+
+header {
+background:#2e1a47;color:white;text-align:center;padding:15px;
+}
+
+.hero {
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1519681393784-d120267933ba');
+background-size:cover;
+color:white;text-align:center;padding:100px 20px;
+}
+
+.btn {
+padding:12px 20px;margin:5px;border-radius:5px;
+text-decoration:none;display:inline-block;color:white;
+}
+.call {background:#ff6a00;}
+.whatsapp {background:#25D366;}
+
+.section {padding:30px;text-align:center;}
+
+.main-grid {
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:15px;
+}
+
+.main-card {
+position:relative;
+border-radius:12px;
+overflow:hidden;
+cursor:pointer;
+}
+
+.main-card img {
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.overlay {
+position:absolute;
+bottom:0;
+width:100%;
+background:linear-gradient(transparent, rgba(0,0,0,0.7));
+color:white;
+padding:20px;
+}
+
+.side-cards {
+display:grid;
+gap:10px;
+}
+
+.card {
+background:white;
+padding:15px;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+}
+.card:hover {
+transform:scale(1.05);
+background:#fff7e6;
+}
+
+.map-container {position:relative;max-width:600px;margin:auto;}
+.map-container img {width:100%;}
+
+.pin {
+position:absolute;
+background:#ff5722;
+color:white;
+padding:5px;
+border-radius:5px;
+font-size:12px;
+}
+
+form input {
+padding:10px;margin:5px;width:80%;max-width:300px;
+}
+
+.state-grid {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.state-card {
+background:white;
+padding:15px;
+border-radius:10px;
+text-align:left;
+}
+
+.state-card h3 {color:#ff6a00;}
+
+.state-card ul {list-style:none;padding:0;}
+
+.state-card li {
+padding:8px;
+cursor:pointer;
+border-bottom:1px solid #eee;
+}
+
+.state-card li:hover {background:#fff7e6;}
+
+.footer {
+background:#2e1a47;color:white;padding:20px;text-align:center;
+}
+
+.sticky {
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px;
+border-radius:50%;
+color:white;
+}
+
+@media(max-width:768px){
+.main-grid {grid-template-columns:1fr;}
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-🚗 7-Seater Family Trip Cab | 📞 9773751838
-</header>
+<header>🕉️ Spiritual Yatra | 📞 9773751838</header>
 
 <section class="hero">
-<h1>Book 7-Seater Cab for Family Trips</h1>
-<p>Delhi to Manali, Shimla, Jaipur & More</p>
-<p class="highlight">🔥 Limited bookings available – Book early!</p>
+<h1>Divine Journeys Across India</h1>
+<p>Jyotirling • Char Dham • Temple Tours</p>
 
-<a href="tel:919773751838" class="btn call">Call Now</a>
-<a href="https://wa.me/919773751838?text=Hi%20I%20want%20to%20book%20a%207-seater%20cab" class="btn whatsapp">WhatsApp</a>
-</section>
-
-<section class="section">
-<h2>🚕 Popular Trips</h2>
-
-<div class="cards">
-
-<!-- MANALI -->
-<div class="card fade-left">
-<div class="slider">
-<img src="https://images.unsplash.com/photo-1605649487212-47bdab064df1">
-<img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23">
-<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
-</div>
-<h3>Manali Trip</h3>
-<p>Snow, mountains & adventure 🌄</p>
-<p class="call-highlight">📞 9773751838</p>
-</div>
-
-<!-- SHIMLA -->
-<div class="card fade-right">
-<div class="slider">
-<img src="https://images.unsplash.com/photo-1597074866923-dc0589150358">
-<img src="https://images.unsplash.com/photo-1614094082869-cd4e4b2905c7">
-<img src="https://images.unsplash.com/photo-1622308644420-b20142dc993c">
-</div>
-<h3>Shimla Trip</h3>
-<p>Mall Road, hills & relaxing vibes 🌲</p>
-<p class="call-highlight">📞 9773751838</p>
-</div>
-
-<!-- JAIPUR -->
-<div class="card fade-left">
-<img src="https://images.unsplash.com/photo-1599661046289-e31897846e41">
-<h3>Jaipur Trip</h3>
-<p>Forts & royal experience 🏰</p>
-<p><b>Call for Best Price</b></p>
-</div>
-
-<!-- RISHIKESH -->
-<div class="card fade-right">
-<img src="https://images.unsplash.com/photo-1589793907316-f94025b46850">
-<h3>Rishikesh Trip</h3>
-<p>Adventure & peace 🌊</p>
-<p><b>Call for Best Price</b></p>
-</div>
-
-</div>
-</section>
-
-<section class="section">
-<h2>⭐ Why Choose Us?</h2>
-<p>✔ Owner-driven cab</p>
-<p>✔ Clean & comfortable</p>
-<p>✔ No hidden charges</p>
-</section>
-
-<section class="section">
-<h2>📞 Get Best Price</h2>
 <a href="tel:919773751838" class="btn call">Call Now</a>
 <a href="https://wa.me/919773751838" class="btn whatsapp">WhatsApp</a>
+</section>
+
+<!-- DESTINATIONS -->
+<section class="section">
+<h2>🛕 Spiritual Destinations</h2>
+
+<div class="main-grid">
+
+<div class="main-card" onclick="openMap('Kedarnath Temple Uttarakhand')">
+<img src="https://images.pexels.com/photos/19271393/pexels-photo-19271393.jpeg">
+<div class="overlay">
+<h2>Kedarnath</h2>
+<p>Click for route 📍</p>
+</div>
+</div>
+
+<div class="side-cards">
+<div class="card" onclick="openMap('Somnath Temple Gujarat')">
+<h3>Somnath</h3>
+</div>
+
+<div class="card" onclick="openMap('Kashi Vishwanath Temple Varanasi')">
+<h3>Kashi Vishwanath</h3>
+</div>
+
+<div class="card" onclick="openMap('Haridwar Uttarakhand')">
+<h3>Haridwar</h3>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- MAP -->
+<section class="section">
+<h2>🗺️ All India Coverage</h2>
+
+<div class="map-container">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/India_Map.svg">
+<div class="pin" style="top:40%; left:35%;">Delhi</div>
+<div class="pin" style="top:25%; left:45%;">Kedarnath</div>
+<div class="pin" style="top:50%; left:60%;">Varanasi</div>
+</div>
+</section>
+
+<!-- BOOKING -->
+<section class="section">
+<h2>📋 Book Your Yatra</h2>
+
+<form onsubmit="sendToWhatsApp(event)">
+<input id="name" placeholder="Your Name" required><br>
+<input id="place" placeholder="Destination" required><br>
+<input id="date" type="date" required><br>
+
+<button class="btn call">Send on WhatsApp</button>
+</form>
+</section>
+
+<!-- STATE DATA -->
+<section class="section">
+<h2>🛕 State-wise Spiritual Destinations</h2>
+
+<div class="state-grid">
+
+<div class="state-card">
+<h3>Uttar Pradesh</h3>
+<ul>
+<li onclick="openMap('Ayodhya Ram Mandir')">Ayodhya</li>
+<li onclick="openMap('Kashi Vishwanath Temple')">Varanasi</li>
+<li onclick="openMap('Mathura Krishna Janmabhoomi')">Mathura</li>
+</ul>
+</div>
+
+<div class="state-card">
+<h3>Bihar</h3>
+<ul>
+<li onclick="openMap('Bodh Gaya Mahabodhi Temple')">Bodh Gaya</li>
+<li onclick="openMap('Vishnupad Temple Gaya')">Gaya</li>
+</ul>
+</div>
+
+<div class="state-card">
+<h3>Uttarakhand</h3>
+<ul>
+<li onclick="openMap('Kedarnath Temple')">Kedarnath</li>
+<li onclick="openMap('Badrinath Temple')">Badrinath</li>
+</ul>
+</div>
+
+</div>
 </section>
 
 <div class="footer">
 <p>📍 Delhi / Gurgaon</p>
 <p>📞 9773751838</p>
-<p>© 2026 All Rights Reserved</p>
+<p>🙏 Spiritual Travel Service Across India</p>
 </div>
 
-<a href="https://wa.me/919773751838" class="sticky-whatsapp">💬</a>
+<a href="https://wa.me/919773751838" class="sticky">💬</a>
 
-<script src="script.js"></script>
+<script>
+function openMap(place){
+const url="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(place);
+window.open(url,"_blank");
+}
+
+function sendToWhatsApp(e){
+e.preventDefault();
+let name=document.getElementById("name").value;
+let place=document.getElementById("place").value;
+let date=document.getElementById("date").value;
+
+let msg=`Name: ${name}%0ADestination: ${place}%0ADate: ${date}`;
+window.open(`https://wa.me/919773751838?text=${msg}`);
+}
+</script>
 
 </body>
 </html>
